@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>Ries Lab 4</title>
+        <link rel="stylesheet" href="ries_lab4.css ">
+    </head>
+
+    <body>
+        <!--Header Section-->
+        <header>
+            <h1>INST 377- Ries Lab 4</h1>
+        </header>    
+
+    <!--Main Page-->
+   <div class="mainContainer">
+
+        <!--Name-->
+        <div class="section" id="personname">
+            <form name="nameForm" onsubmit="return(nameValidation())">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="contact_name" required>
+                <input type="submit" value="Alert Me!">
+            </form>
+
+            <script type="text/javascript">
+                function nameValidation(){
+                
+                    console.log()
+
+                    var name = document.getElementById('contact_name').value;
+                    alert('Hello '+ name);
+                }
+            </script>
+        </div>
+
+            <!--Change Color-->
+        <div class="section" id="changecolor">
+            <button onclick="colorChange()">Change Color</button>
+
+            <script type="text/javascript">
+                function colorChange() {
+                    if(document.body.style.backgroundColor== "cornflowerblue") {
+                        document.body.style.backgroundColor ="coral"
+                    } else {
+                        document.body.style.backgroundColor="cornflowerblue"
+                    }
+                }
+            </script>
+            
+        </div>
+
+            <!--Text Tester-->
+        <div class="section" id="texttester">
+            <form name="formvalidation" onsubmit="return(textValidation())">
+                <label>Text Tester:</label>
+                <input type="text" name="text" id="anytext">
+                <input type="submit" value="Validate Text">
+            </form>
+
+            <script type="text/javascript">
+                function textValidation(){
+                    var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+
+                    var inputValue= document.forms["formvalidation"]["text"].value;
+                
+                    if (validation.test(inputValue)) {
+                        alert('How about.... not :P')
+                        return false
+                    }          
+                return true;
+                }
+            </script>
+        </div>
+
+            <!--Add Text-->
+        <div class="section" id="addtext">
+            <button onclick="addText()">Add Text</button>
+
+            <script type="text/javascript">
+                function addText() {
+                var header = document.querySelector('header h1');
+
+                header.textContent += " - Adding Text";
+                }
+            </script>
+        </div>
+
+
+
+
+   </div>
+
+    
+    </body>
+    
+</html>
