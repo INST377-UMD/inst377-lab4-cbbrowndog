@@ -1,0 +1,35 @@
+body {
+    background-color: coral;
+}
+
+.section {
+    background-color: aqua;
+    margin: 20px;
+    padding: 10px;
+    border: whitesmoke solid 5px;
+    text-align: center;
+    width: 40%;
+}
+
+
+
+#personname {
+    float: left;
+
+}
+
+#changecolor {
+    float: right;
+}
+
+#addtext {
+    float: right;
+}
+
+
+#texttester {
+    float: left;
+    clear:both;
+}
+
+
